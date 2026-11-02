@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="27200" systemVersion="26A434" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="LocalClipsModelV1">
+    <entity name="ClipRecord" representedClassName="NSManagedObject" syncable="NO">
+        <attribute name="byteCount" optional="NO" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="digest" optional="NO" attributeType="String"/>
+        <attribute name="hashVersion" optional="NO" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="inHistory" optional="NO" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="kind" optional="NO" attributeType="String"/>
+        <attribute name="lastCapturedAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastUsedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="searchText" optional="NO" attributeType="String"/>
+        <attribute name="sourceBundleID" optional="YES" attributeType="String"/>
+        <attribute name="sourceConfidence" optional="NO" attributeType="String"/>
+        <attribute name="sourceName" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="NO" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SnapshotItem" inverseName="record" inverseEntity="SnapshotItem"/>
+        <relationship name="memberships" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Membership" inverseName="record" inverseEntity="Membership"/>
+    </entity>
+    <entity name="Membership" representedClassName="NSManagedObject" syncable="NO">
+        <attribute name="addedAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="position" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="board" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Pinboard" inverseName="memberships" inverseEntity="Pinboard"/>
+        <relationship name="record" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="ClipRecord" inverseName="memberships" inverseEntity="ClipRecord"/>
+    </entity>
+    <entity name="Pinboard" representedClassName="NSManagedObject" syncable="NO">
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="position" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="memberships" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Membership" inverseName="board" inverseEntity="Membership"/>
+    </entity>
+    <entity name="Representation" representedClassName="NSManagedObject" syncable="NO">
+        <attribute name="data" optional="NO" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="position" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="typeIdentifier" optional="NO" attributeType="String"/>
+        <relationship name="item" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="SnapshotItem" inverseName="representations" inverseEntity="SnapshotItem"/>
+    </entity>
+    <entity name="SnapshotItem" representedClassName="NSManagedObject" syncable="NO">
+        <attribute name="position" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="record" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="ClipRecord" inverseName="items" inverseEntity="ClipRecord"/>
+        <relationship name="representations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Representation" inverseName="item" inverseEntity="Representation"/>
+    </entity>
+    <elements>
+        <element name="ClipRecord" positionX="-252" positionY="-18" width="128" height="300"/>
+        <element name="Membership" positionX="-28" positionY="-18" width="128" height="105"/>
+        <element name="Pinboard" positionX="196" positionY="-18" width="128" height="90"/>
+        <element name="Representation" positionX="196" positionY="190" width="128" height="90"/>
+        <element name="SnapshotItem" positionX="-28" positionY="190" width="128" height="75"/>
+    </elements>
+</model>

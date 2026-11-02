@@ -1,0 +1,9 @@
+.DS_Store
+.codex/
+**/xcuserdata/
+*.xcuserstate
+DerivedData/
+**/DerivedData/
+
+# Generated, locally signed build output.
+artifacts/LocalClips.app/

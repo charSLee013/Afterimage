@@ -1,0 +1,46 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+		A10000000000000000000001 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* App.swift */; };
+		A10000000000000000000002 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* Domain.swift */; };
+		A10000000000000000000003 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* HistoryStore.swift */; };
+		A10000000000000000000004 /* ClipboardRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* ClipboardRecorder.swift */; };
+		A10000000000000000000006 /* PasteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* PasteController.swift */; };
+		A10000000000000000000007 /* LocalClips.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* LocalClips.xcdatamodeld */; };
+		A10000000000000000000008 /* HotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* HotKeyController.swift */; };
+		A10000000000000000000009 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* LoginController.swift */; };
+		A10000000000000000000010 /* ManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* ManagerView.swift */; };
+		A10000000000000000000011 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* SettingsView.swift */; };
+		B10000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* ClipboardRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardRecorder.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* PasteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteController.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000009 /* LocalClips.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = LocalClips.xcdatamodeld; sourceTree = "<group>"; };
+		B10000000000000000000010 /* HotKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyController.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B10000000000000000000012 /* ManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerView.swift; sourceTree = "<group>"; };
+		B10000000000000000000013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* LocalClips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalClips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10000000000000000000001 /* Sources */ = {isa = PBXGroup; children = (B10000000000000000000001, B10000000000000000000002, B10000000000000000000003, B10000000000000000000004, B10000000000000000000006, B10000000000000000000008, B10000000000000000000010, B10000000000000000000011, B10000000000000000000012, B10000000000000000000013,); path = LocalClips/Sources; sourceTree = "<group>"; };
+		C10000000000000000000002 = {isa = PBXGroup; children = (C10000000000000000000001, C10000000000000000000004 /* Models */, C10000000000000000000003 /* Products */,); sourceTree = "<group>"; };
+		C10000000000000000000003 /* Products */ = {isa = PBXGroup; children = (B10000000000000000000007,); name = Products; sourceTree = "<group>"; };
+		C10000000000000000000004 /* Models */ = {isa = PBXGroup; children = (B10000000000000000000009,); path = LocalClips/Models; sourceTree = "<group>"; };
+		D10000000000000000000001 /* LocalClips */ = {isa = PBXNativeTarget; buildConfigurationList = E10000000000000000000002; buildPhases = (F10000000000000000000001, F10000000000000000000002, F10000000000000000000003,); buildRules = (); dependencies = (); name = LocalClips; productName = LocalClips; productReference = B10000000000000000000007; productType = "com.apple.product-type.application"; };
+		D10000000000000000000002 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 2720; TargetAttributes = {D10000000000000000000001 = {CreatedOnToolsVersion = 27.2; }; }; }; buildConfigurationList = E10000000000000000000001; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = C10000000000000000000002; productRefGroup = C10000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = (D10000000000000000000001,); };
+		F10000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000004, A10000000000000000000006, A10000000000000000000008, A10000000000000000000009, A10000000000000000000010, A10000000000000000000011,); runOnlyForDeploymentPostprocessing = 0; };
+		F10000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		F10000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000007,); runOnlyForDeploymentPostprocessing = 0; };
+		E10000000000000000000001 /* Project configuration list */ = {isa = XCConfigurationList; buildConfigurations = (E20000000000000000000001, E20000000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		E10000000000000000000002 /* Target configuration list */ = {isa = XCConfigurationList; buildConfigurations = (E20000000000000000000003, E20000000000000000000004,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		E20000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; MACOSX_DEPLOYMENT_TARGET = 27.0; SDKROOT = macosx; SWIFT_VERSION = 6.0; }; name = Debug; };
+		E20000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; MACOSX_DEPLOYMENT_TARGET = 27.0; SDKROOT = macosx; SWIFT_VERSION = 6.0; }; name = Release; };
+		E20000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_IDENTITY = "-"; CODE_SIGN_STYLE = Manual; CODE_SIGNING_ALLOWED = YES; CODE_SIGNING_REQUIRED = NO; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = LocalClips/Sources/Info.plist; MACOSX_DEPLOYMENT_TARGET = 27.0; PRODUCT_BUNDLE_IDENTIFIER = local.charslee.localclips; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = macosx; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 6.0; }; name = Debug; };
+		E20000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_IDENTITY = "-"; CODE_SIGN_STYLE = Manual; CODE_SIGNING_ALLOWED = YES; CODE_SIGNING_REQUIRED = NO; ENABLE_APP_SANDBOX = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = LocalClips/Sources/Info.plist; MACOSX_DEPLOYMENT_TARGET = 27.0; PRODUCT_BUNDLE_IDENTIFIER = local.charslee.localclips; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = macosx; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 6.0; }; name = Release; };
+	};
+	rootObject = D10000000000000000000002 /* Project object */;
+}
